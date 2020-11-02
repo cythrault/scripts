@@ -1,0 +1,189 @@
+function get-something {
+	param(
+		[Parameter(Mandatory=$true)]
+		[string] $prenom,
+		[Parameter(Mandatory=$true)]
+		[string] $nom,
+		[Parameter(Mandatory=$true)]
+		[string] $domaine,
+		[Parameter(Mandatory=$true)]
+		[string] $id,
+		[Parameter(Mandatory=$true)]
+		[string] $site,
+		[Parameter(Mandatory=$true)]
+		[string] $ticket
+	)
+
+	new-object psobject -property @{
+		prenom=$prenom
+		nom=$nom
+		domaine=$domaine
+		id=$id
+		site=$site
+		ticket=$ticket
+	}
+}
+
+function Get-FileName($InitialDirectory) {
+	[System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | Out-Null
+	$OpenFileDialog = New-Object System.Windows.Forms.OpenFileDialog
+	$OpenFileDialog.InitialDirectory = $InitialDirectory
+	$OpenFileDialog.filter = "CSV (*.csv)|*.csv|Excel (*.xlsx)|*.xlsx|All files (*.*)|*.*"
+	$OpenFileDialog.ShowDialog() | Out-Null
+	$OpenFileDialog.Filename
+}
+
+function Nouvel-Utilisateur {
+	param(
+		[Parameter(Mandatory=$True, ValueFromPipeline=$True, ValueFromPipelineByPropertyName=$True)]
+		[string] $prenom,
+		[Parameter(Mandatory=$True, ValueFromPipeline=$True, ValueFromPipelineByPropertyName=$True)]
+		[string] $nom,
+		[Parameter(Mandatory=$True, ValueFromPipeline=$True, ValueFromPipelineByPropertyName=$True)]
+		[string] $domaine,
+		[Parameter(Mandatory=$True, ValueFromPipeline=$True, ValueFromPipelineByPropertyName=$True)]
+		[string] $id,
+		[Parameter(Mandatory=$True, ValueFromPipeline=$True, ValueFromPipelineByPropertyName=$True)]
+		[string] $site,
+		[Parameter(Mandatory=$True, ValueFromPipeline=$True, ValueFromPipelineByPropertyName=$True)]
+		[string] $ticket
+	)
+
+	# load Exchange and Lync PSSessions
+	try {
+		if (-Not $(Get-PSSession|where ConfigurationName -eq "Microsoft.Exchange")) {
+			Write-Host -ForegroundColor Black -BackgroundColor DarkGreen "Loading Exchange Session."
+			$ExchSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://pvwexc0a.bnquebec.ca/PowerShell/ -Authentication Kerberos
+			Import-PSSession $ExchSession | Out-Null
+			Set-AdServerSettings -ViewEntireForest $True
+		}
+
+	# TODO add exchange online session
+
+		if (-Not $(Get-PSSession|where {$_.ComputerName -like "*skypepool*"} ) ) {
+			Write-Host -ForegroundColor Black -BackgroundColor DarkGreen "Loading Skype Session."
+			$LyncSession = New-PSSession -ConnectionUri https://skypepoolfe01.banq.qc.ca/OcsPowerShell -Authentication NegotiateWithImplicitCredential
+			Import-PSSession $LyncSession | Out-Null
+		}
+	}
+
+	catch {
+		Write-Host -ForegroundColor Black -BackgroundColor Red "Error loading PS remote sessions - Can't proceed without valid Exchange and Skype sessions."
+		break
+	}
+
+	# Check if commands are available
+	if (-Not (Get-Command Get-CSUser) -or -Not (Get-Command Get-Mailbox)) { 
+		Write-Host -ForegroundColor Black -BackgroundColor Red "Commands are not availables - Can't proceed without valid Exchange and Skype sessions."
+		break
+	}
+	
+	switch($domaine) { 
+		"archives" { $logonscript = "LSanq.cmd" } 
+		"biblio"   { $logonscript = "GBQ.cmd" } 
+		default    { $logonscript = "" } 
+	}
+
+	$pwd = "FrancoisLegault2018"
+	
+	New-ADUser -SamAccountName $id -GivenName $prenom -Surname $nom -DisplayName "$nom $prenom" `
+		-Name "$nom $prenom" –UserPrincipalName "$($id)@bnquebec.ca" -ScriptPath $logonscript `
+		-AccountPassword (ConvertTo-SecureString $pwd -AsPlainText -force) `
+		-ChangePasswordAtLogon $true -Company "BAnQ" -Enabled $true `
+		-Server "$domaine.bnquebec.ca" `
+		-Path "OU=$($site),OU=Employes,OU=Usagers,OU=1.Gestion,DC=$($domaine),DC=bnquebec,DC=ca" –Verbose
+
+	$user = Get-ADUser -Identity $id -Server "bnquebec.ca:3268" -Properties *
+	
+	$groups = @()
+	$groups += Get-ADGroup -Identity AvanProd -Server "bnquebec.ca"
+	$groups += Get-ADGroup -Identity SSL.usagers -Server "$domaine.bnquebec.ca"
+	$groups += Get-ADGroup -Identity SSL.Cadres -Server "$domaine.bnquebec.ca"
+	$groups += Get-ADGroup -Identity SSL.Informatiques -Server "$domaine.bnquebec.ca"
+	$groups += Get-ADGroup -Identity Tous -Server biblio.bnquebec.ca
+	
+	switch($site) { 
+		"berri" { $groups += Get-ADGroup -Identity "Grande Bibliothèque" -Server biblio.bnquebec.ca }
+		"holt"  { $groups += Get-ADGroup -Identity "Holt" -Server biblio.bnquebec.ca }
+	}
+	
+	$groups | ForEach { Add-ADGroupMember -Identity $_ -Members $user -Verbose }
+		
+	switch($domaine) {
+		"archives" {
+			switch($site) {
+				"Québec"        { $region = "CAC" }
+				"Gatineau"      { $region = "CAG" }
+				"Montréal"      { $region = "CAM" }
+				"Québec"        { $region = "CAQ" }
+				"Rimouski"      { $region = "CAR" }
+				"Rouyn"         { $region = "CARN" }
+				"Sherbrooke"    { $region = "CAS" }
+				"Sept-îles"     { $region = "CASI" }
+				"Trois-Rivière" { $region = "CATR" }
+				default         { $region = "biblio" }
+			}
+		}
+		"biblio" { $region = "biblio" }
+		default  { $region = "biblio" }
+	}
+
+	$lecteurs = @()
+	$lecteurs += "\\bnquebec.ca\Perso\$region\$id"
+	$lecteurs += "\\bnquebec.ca\BAnQ\Archivage\$id"
+	$lecteurs | ForEach {
+		New-Item -Path $_ -ItemType Directory -Verbose
+		$acl = Get-Acl $_
+		$rule = New-Object System.Security.AccessControl.FileSystemAccessRule($id, "Modify", "ContainerInherit, ObjectInherit", "None", "Allow")
+		$acl.SetAccessRule($rule)
+		Set-Acl $_ $acl -Verbose
+	}
+ 
+	Enable-Mailbox -Identity $id -Verbose
+	Enable-CsUser -Identity $user.UserPrincipalName -SipAddressType SamAccountName -SipDomain banq.qc.ca -RegistrarPool skypepoolfe01.banq.qc.ca
+
+	$body  = "Ceci est une notification afin de vous aviser suite à la création d'un nouveau compte.<br>"
+	$body += "<br>"
+	$body += "Prénom: <b>$($prenom)</b><br>"
+	$body += "Nom: <b>$($nom)</b><br>"
+	$body += "Affichage dand carnets: <b>$($user.displayname)</b><br>"
+	$body += "<br>"
+	$body += "Détails du compte:<br>"
+	$body += "Emplacement: <b>$($user.cn)</b><br>"
+	$body += "Identifiant du compte (SamAccountName:) <b>$($domaine)\$($id)</b><br>"
+	$body += "Identifiant du compte (UserPrincipalName:) <b>$($user.UserPrincipalName)</b><br>"
+	$body += "Courriel et addresse Skype: <b>$($user.mail)</b><br>"
+	$body += "Mot de passe temporaire: <b>$($pwd)</b><br>"
+	$body += "<br>"
+	$body += "<br>"
+	Send-MailMessage -From nepasrepondre@banq.qc.ca -To martin.thomas@banq.qc.ca -Encoding UTF8 -BodyAsHtml -Subject "Nouveau compte - $prenom $nom – $id" -SmtpServer courriel.banq.qc.ca -Body $body
+}
+
+Start-Transcript -Path c:\ops\logs\Enable-LyncMailbox.log
+
+$importfile = Get-FileName
+
+if ( $importfile ) {
+	# CVS ou Excel
+	# import
+	# validation
+	$users | Nouvel-Utilisateur
+} else {
+	try { $user = iex (show-command get-something -passthru) }
+	catch {
+		Write-Host -ForegroundColor Black -BackgroundColor Red "Impossible d'obtenir l'information de(s) compte(s)."
+		break
+	}
+
+	Write-Host "Information sur le compte"
+	Write-Host "Prénom: $($user.prenom)"
+	Write-Host "Nom: $($user.nom)"
+	Write-Host "Domaine: $($user.domaine)"
+	Write-Host "Identifiant: $($user.id)"
+	Write-Host "Site: $($user.site)"
+	Write-Host "Billet C2: $($user.ticket)"
+
+	$user | Nouvel-Utilisateur
+}
+
+Stop-Transcript

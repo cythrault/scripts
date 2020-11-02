@@ -1,0 +1,115 @@
+#--------------------------------------------------------------------------------------------------------------------
+# FIM 2010 Synchronization Script
+#--------------------------------------------------------------------------------------------------------------------
+# Usage:
+# There are a few valid ways to execute run profiles on a management agent:
+#   $ma.Run('Full Import')
+#   $ma.FullImport()
+#   ExecuteRunProfile $ma 'Full Import'
+#
+# Run profiles can also be executed concurrently:
+#   ConcurrentRun ($ma1, $ma2, $ma3) 'Full Import'
+#
+#--------------------------------------------------------------------------------------------------------------------
+
+# Set up argument parameter and set default run profile type to DELTA
+param([string]$runProfileType = "DELTA")
+
+Start-Transcript -append -path (Join-Path ($MyInvocation.MyCommand.Path | Split-Path -Parent) 'Start-FIM-Run-Profiles.log')
+
+# Load the Run Profile Functions
+. (Join-Path ($MyInvocation.MyCommand.Path | Split-Path -Parent) 'Load-Fim-Run-Profile-Functions.ps1')
+
+# Management Agents
+$PBADMA =  Get-ManagementAgent 'PB ADMA'
+$HRMA =  Get-ManagementAgent 'HR MA'
+$HRMoveMA = Get-ManagementAgent 'HR Move MA'
+
+# Check if there are any Management Agents currently running, abort this script if there are.
+Get-ManagementAgents | foreach { if ($_.RunStatus().ReturnValue -eq 'in-progress') { Write-Host "Management Agent currently running. Aborting initialization of another run." -Foregroundcolor white -Backgroundcolor darkred; Exit } }
+
+# SSIS
+[string]$HRimportToILM = "c:\SSIS-Soln\HRimportToILM\HRimportToILM\bin\AD_ProjOrgEmp_AddUpdate.dtsx"
+[string]$HRexportFromILM = "c:\SSIS-Soln\HRexportFromILM\HRexportFromILM\bin\PB_Email_update_temp.dtsx"
+[string]$DTExecPath = "C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\DTExec.exe"
+[string]$logpath = ($MyInvocation.MyCommand.Path | Split-Path -Parent)
+
+switch ($runProfileType)
+{
+    "DELTA"
+    {
+		# Synchronization Run
+		Write-Host ("[{0:yyyy-MM-dd HH:mm:ss}] " -f $(Get-Date)) -nonewline;
+		Write-Host "Beginning Sync Runs [DELTA]" -foregroundColor Blue -backgroundcolor White
+
+		ExecuteRunProfile $PBADMA $DeltaImport
+		ExecuteRunProfile $PBADMA $DeltaSync
+		
+		ExecuteRunProfile $HRMoveMA $FullImport
+		ExecuteRunProfile $HRMoveMA $DeltaSync
+
+		ExecuteSSIS $DTExecPath $HRimportToILM HRimportToILM $logpath
+		
+		ExecuteRunProfile $HRMA $FullImport
+		ExecuteRunProfile $HRMA $DeltaSync
+		
+		ExecuteRunProfile $PBADMA $Export
+		ExecuteRunProfile $PBADMA $DeltaImport
+		ExecuteRunProfile $PBADMA $DeltaSync
+
+		ExecuteRunProfile $PBADMA $Export
+		ExecuteRunProfile $HRMoveMA $Export
+		ExecuteRunProfile $HRMA $Export
+
+		ExecuteSSIS $DTExecPath $HRexportFromILM HRexportFromILM $logpath
+		
+		Write-Host ("[{0:yyyy-MM-dd HH:mm:ss}] " -f $(Get-Date)) -nonewline;
+		Write-Host "Completed Sync Runs [DELTA]" -foregroundColor Blue -backgroundcolor White
+    }
+
+    "FULL"
+    {
+		# Synchronization Run
+		Write-Host ("[{0:yyyy-MM-dd HH:mm:ss}] " -f $(Get-Date)) -nonewline;
+		Write-Host "Beginning Sync Runs [DELTA]" -foregroundColor Blue -backgroundcolor White
+
+		ExecuteRunProfile $PBADMA $FullImport
+		ExecuteRunProfile $PBADMA $FullSync
+		
+		ExecuteRunProfile $HRMoveMA $FullImport
+		ExecuteRunProfile $HRMoveMA $FullSync
+
+		ExecuteSSIS $DTExecPath $HRimportToILM HRimportToILM $logpath
+		
+		ExecuteRunProfile $HRMA $FullImport
+		ExecuteRunProfile $HRMA $FullSync
+		
+		ExecuteRunProfile $PBADMA $Export
+		ExecuteRunProfile $PBADMA $DeltaImport
+		ExecuteRunProfile $PBADMA $DeltaSync
+
+		ExecuteRunProfile $PBADMA $Export
+		ExecuteRunProfile $HRMoveMA $Export
+		ExecuteRunProfile $HRMA $Export
+
+		ExecuteSSIS $DTExecPath $HRexportFromILM HRexportFromILM $logpath
+		
+		Write-Host ("[{0:yyyy-MM-dd HH:mm:ss}] " -f $(Get-Date)) -nonewline;
+		Write-Host "Completed Sync Runs [DELTA]" -foregroundColor Blue -backgroundcolor White
+    }
+
+    default
+    {
+        Write-Host "Invalid run profile type specified. Please specify DELTA, IMPORT, EXPORT or FULL on the command line" -Foregroundcolor Red
+        Exit
+    }
+}
+
+Write-Host "Done." -foregroundcolor Blue -backgroundcolor White
+	
+#--------------------------------------------------------------------------------------------------------------------
+trap 
+{ 
+	Write-Host "`nError: $($_.Exception.Message)`n" -Foregroundcolor white -Backgroundcolor darkred
+}
+#--------------------------------------------------------------------------------------------------------------------

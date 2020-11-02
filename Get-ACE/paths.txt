@@ -1,0 +1,211 @@
+\\pbwfsp0t.bnquebec.ca\Direction générale de la conservation
+\\phwfsp0k.bnquebec.ca\LaserficheACP
+\\pvwfsp0c.bnquebec.ca\CTXUPM$
+\\pvwfsp0c.bnquebec.ca\citrixupm$
+\\dvwfsp0a.bnquebec.ca\LaserficheDEV
+\\pvwfsp0c.bnquebec.ca\Gnum$
+\\pvwfsp0c.bnquebec.ca\SKYPEDATA
+\\pvwfsp0c.bnquebec.ca\PGIDEV$
+\\pbwfsp0t.bnquebec.ca\LOGSESSION$
+\\pvwfsp0c.bnquebec.ca\LaserFiche
+\\pvwfsp0c.bnquebec.ca\SHIFT$
+\\pbwfsp0t.bnquebec.ca\ImagesCAM
+\\pbwfsp0t.bnquebec.ca\UMANA_PROD
+\\pvwfsp0c.bnquebec.ca\StreamCitrix$
+\\pbwfsp0t.bnquebec.ca\ImagesCAQ
+\\pbwfsp0t.bnquebec.ca\Archivage$
+\\pbwfsp0t.bnquebec.ca\SQLSHARE16
+\\pbwfsp0t.bnquebec.ca\Archives Audio-Visuel
+\\pbwfsp0t.bnquebec.ca\UMANA_ACP
+\\pvwfsp0c.bnquebec.ca\PGI$
+\\pvwfsp0c.bnquebec.ca\medisolution$
+\\pbwfsp0t.bnquebec.ca\Medipay_acp
+\\pbwfsp0t.bnquebec.ca\SQLA_IA
+\\pvwfsp0c.bnquebec.ca\UMANA_DEV
+\\pvwfsp0c.bnquebec.ca\PIVOTAL$
+\\pvwfsp0c.bnquebec.ca\LYNCDATA
+\\pbwfsp0t.bnquebec.ca\CSI$
+\\pbwfsp0t.bnquebec.ca\DGTIT$
+\\phwfsp0d.bnquebec.ca\numtraitement\GID
+\\pbwfsp0z.bnquebec.ca\DGC2$
+\\pbwfsp0j.bnquebec.ca\DGC1$
+\\PBWFSP0Q.bnquebec.ca\DGC2$
+\\pbwfsp0y.bnquebec.ca\DGC3$
+\\PBWFSP0P.bnquebec.ca\DGC1$
+\\pbwfsp0e.bnquebec.ca\dgc1$
+\\phwfsp0l\ps
+\\phwfsp0d.bnquebec.ca\numtraitement\projet
+\\phwfsp0a\dgc1$
+\\phwfsp0e\dgc3$
+\\phwfsp0c.bnquebec.ca\PROJ2
+\\PBWFSP0V.bnquebec.ca\DGC1$
+\\phenas0a.bnquebec.ca\ConservationNumerique
+\\phwfsp0m\pgq
+\\Pbwfsp0b\dgc3$
+\\PHWFSP0D.bnquebec.ca\NumTraitement-NAS
+\\PHWFSP0O.bnquebec.ca\DGC3$
+\\Pbwfsp0i\dgc2$
+\\pbwfsp0a\dgc2$
+\\PBWFSP0W.bnquebec.ca\DGC2$
+\\phwfsp0g.bnquebec.ca\dgc3$
+\\phwfsp0d.bnquebec.ca\numtraitement\zone51
+\\PHWFSP0P.bnquebec.ca\BRAS
+\\pbwfsp0g.bnquebec.ca\dgc2$
+\\phwfsp0m\repro
+\\PHWFSP0D.bnquebec.ca\numtraitement\LAB
+\\pbwfsp0k.bnquebec.ca\DGC2$
+\\PHWFSP0I.bnquebec.ca\DGC3$
+\\phwfsp0d.bnquebec.ca\numtraitement\ar
+\\pbwfsp0h\dgc1$
+\\PHWFSP0D.BNQUEBEC.CA\numtraitement\ADMIN
+\\phwfsp0d.bnquebec.ca\numtraitement\BI
+\\phwfsp0z.bnquebec.ca\DGC1$
+\\phwfsp0h.bnquebec.ca\DGC3$
+\\PHWFSP0N\ETC
+\\phwfsp0j\repro2
+\\phwfsp0d.bnquebec.ca\numtraitement\AN
+\\pbwfsp0t.bnquebec.ca\CARN
+\\pbwfsp0t.bnquebec.ca\CAR
+\\pbwfsp0t.bnquebec.ca\CAS
+\\pbwfsp0t.bnquebec.ca\CAM
+\\pbwfsp0t.bnquebec.ca\CATR
+\\pbwfsp0t.bnquebec.ca\CAQ
+\\pbwfsp0t.bnquebec.ca\CASI
+\\pbwfsp0t.bnquebec.ca\biblio
+\\pbwfsp0t.bnquebec.ca\CAC
+\\pbwfsp0t.bnquebec.ca\CAG
+\\pbwfsp0t.bnquebec.ca\Comite_organisateur_Entraide
+\\pbwfsp0t.bnquebec.ca\Billetterie
+\\pbwfsp0t.bnquebec.ca\Direction_reference_pret
+\\pbwfsp0t.bnquebec.ca\Gabarits_Power_Point_et_MS_Word
+\\pbwfsp0t.bnquebec.ca\Cabinet_PDG
+\\pbwfsp0t.bnquebec.ca\Rapport annuel
+\\pbwfsp0t.bnquebec.ca\Secrétariat général
+\\pbwfsp0t.bnquebec.ca\DCU
+\\LVWW120A.bnquebec.ca\TestBCKDFS
+\\LVWW120c.bnquebec.ca\TestBCKDFS
+\\pbwfsp0t.bnquebec.ca\Medialab
+\\pbwfsp0t.bnquebec.ca\DRE_DCRP
+\\pbwfsp0t.bnquebec.ca\Comite sites web
+\\PHWFSP0D.bnquebec.ca\NumTraitement-NAS
+\\pbwfsp0t.bnquebec.ca\Services_Financiers
+\\pbwfsp0t.bnquebec.ca\RH-DSI
+\\pbwfsp0t.bnquebec.ca\ArchivesSag
+\\pbwfsp0t.bnquebec.ca\DNF
+\\pbwfsp0t.bnquebec.ca\Ententes-cadres avec les universites
+\\pbwfsp0t.bnquebec.ca\Bureau de direction
+\\pbwfsp0t.bnquebec.ca\BAvQ-Droitdauteur
+\\pbwfsp0t.bnquebec.ca\Budget
+\\pbwfsp0t.bnquebec.ca\Direction des services à distance
+\\pbwfsp0t.bnquebec.ca\Direction des services à la clientèle
+\\pbwfsp0t.bnquebec.ca\Direction de l'accueil et du prêt
+\\pbwfsp0t.bnquebec.ca\Comite de travail anti-silos
+\\pbwfsp0t.bnquebec.ca\Comité de santé et de sécurité au travail
+\\pbwfsp0t.bnquebec.ca\Réaménagement_RDC
+\\pbwfsp0t.bnquebec.ca\Evenement
+\\pbwfsp0t.bnquebec.ca\Processus
+\\pbwfsp0t.bnquebec.ca\DNF_Etudes
+\\pbwfsp0t.bnquebec.ca\Amélioration continue
+\\pbwfsp0t.bnquebec.ca\ArchivesAbi
+\\pbwfsp0t.bnquebec.ca\Informatique et télécommunications
+\\pbwfsp0t.bnquebec.ca\DSDMD
+\\pbwfsp0t.bnquebec.ca\Politique et règlementation de BAnQ
+\\pbwfsp0t.bnquebec.ca\BAvQ_comite_suivi_numerisation
+\\pbwfsp0t.bnquebec.ca\Infolettre
+\\pbwfsp0t.bnquebec.ca\Plan_stratégique
+\\pbwfsp0t.bnquebec.ca\ArchivesOut
+\\pbwfsp0t.bnquebec.ca\Direction_collection nationale_services specialises
+\\pbwfsp0t.bnquebec.ca\Macros
+\\pbwfsp0t.bnquebec.ca\Direction des services aux milieux documentaires
+\\pbwfsp0t.bnquebec.ca\Comité sur les données statistiques institutionnelles
+\\pbwfsp0t.bnquebec.ca\Service_quebecois_traitement_documentaire
+\\pbwfsp0t.bnquebec.ca\DP_CN
+\\pbwfsp0t.bnquebec.ca\Formulaires
+\\pbwfsp0t.bnquebec.ca\Filigrane
+\\pbwfsp0t.bnquebec.ca\BAvQ
+\\pbwfsp0t.bnquebec.ca\Plan_numérique
+\\pbwfsp0t.bnquebec.ca\Ephemerides
+\\pbwfsp0t.bnquebec.ca\Preservation des documents numeriques
+\\pbwfsp0t.bnquebec.ca\Boite_a_outils
+\\pbwfsp0t.bnquebec.ca\Direction de la gestion des immeubles
+\\pbwfsp0t.bnquebec.ca\Catalogue de services
+\\pbwfsp0t.bnquebec.ca\Gestion des remplacements
+\\pbwfsp0t.bnquebec.ca\Direction_affaires et commercialisation
+\\PBWFSP0C\ArchiveMTL
+\\PHWFSP0B\ArchiveMTL
+\\pbwfsp0t.bnquebec.ca\Comité Reconnaissance au travail
+\\pbwfsp0t.bnquebec.ca\Services RH - DSC
+\\pbwfsp0t.bnquebec.ca\Paie_RH
+\\pbwfsp0t.bnquebec.ca\Calendrier des activités
+\\pbwfsp0t.bnquebec.ca\Ambassadeurs
+\\pbwfsp0t.bnquebec.ca\Delegation de signatures
+\\pbwfsp0t.bnquebec.ca\ArchivesCNo
+\\phenas0b.bnquebec.ca\TraitementNumerique
+\\pbwfsp0t.bnquebec.ca\Comite_Noel_2010
+\\pbwfsp0t.bnquebec.ca\BAC - Collaboration
+\\pbwfsp0t.bnquebec.ca\Bibliobus-archibus
+\\pbwfsp0t.bnquebec.ca\DPC_DCRP
+\\pbwfsp0t.bnquebec.ca\Developpement_durable
+\\pbwfsp0t.bnquebec.ca\ArchivesMau
+\\pbwfsp0t.bnquebec.ca\A rayons ouverts
+\\pbwfsp0t.bnquebec.ca\Verification
+\\bnquebec.ca\numerique\NumTraitement
+\\pbwfsp0t.bnquebec.ca\BAvQ-Comite_Metadonnees_Interface
+\\pbwfsp0t.bnquebec.ca\Administration et services internes
+\\pbwfsp0t.bnquebec.ca\Construction
+\\pbwfsp0t.bnquebec.ca\Incubateur_St-Sulpice
+\\pbwfsp0t.bnquebec.ca\Groupe de travail patrimoine autochtone
+\\pbwfsp0t.bnquebec.ca\Statistiques institutionnelles_Tableau de bord
+\\pbwfsp0t.bnquebec.ca\Préparation des collections
+\\pbwfsp0t.bnquebec.ca\Assemblee de direction
+\\pbwfsp0t.bnquebec.ca\Visuels-Calendrier des activites
+\\pbwfsp0t.bnquebec.ca\ArchivesMtl
+\\pbwfsp0t.bnquebec.ca\Livre_Electronique
+\\pbwfsp0t.bnquebec.ca\Direction de la Référence
+\\pbwfsp0t.bnquebec.ca\Recreaction
+\\pbwfsp0t.bnquebec.ca\Directives_Suivi
+\\pbwfsp0t.bnquebec.ca\DRE_DAJ
+\\pbwfsp0t.bnquebec.ca\DRE_DCRP
+\\pbwfsp0t.bnquebec.ca\ArchivesBdf
+\\pbwfsp0t.bnquebec.ca\DGASI
+\\pbwfsp0t.bnquebec.ca\Fondation de BAnQ
+\\pbwfsp0t.bnquebec.ca\Historypin
+\\pbwfsp0t.bnquebec.ca\Comite_vert
+\\pbwfsp0t.bnquebec.ca\DPC
+\\pbwfsp0t.bnquebec.ca\Direction du développement institutionnel
+\\pbwfsp0t.bnquebec.ca\Direction des ressources humaines
+\\pbwfsp0t.bnquebec.ca\ArchivesCommun
+\\pbwfsp0t.bnquebec.ca\Calendrier institutionnel
+\\pbwfsp0t.bnquebec.ca\BAvQ_groupe_travail_interface
+\\pbwfsp0t.bnquebec.ca\Direction_Bibliotheque_St-Sulpice
+\\pbwfsp0t.bnquebec.ca\Traitement documentaire
+\\pbwfsp0t.bnquebec.ca\BAnQ
+\\pbwfsp0t.bnquebec.ca\DCNCP
+\\pbwfsp0T.bnquebec.ca\Fiches ministérielles
+\\pbwfsp0t.bnquebec.ca\Direction des affaires juridiques
+\\dvwfsp0c.bnquebec.ca\Finances
+\\pbwfsp0t.bnquebec.ca\Direction générale de la diffusion
+\\pbwfsp0t.bnquebec.ca\Comité itinérance
+\\pbwfsp0t.bnquebec.ca\Direction des communications
+\\pbwfsp0t.bnquebec.ca\ArchivesEst
+\\pbwfsp0t.bnquebec.ca\Nouveaux_medias
+\\pbwfsp0t.bnquebec.ca\Autres en transit
+\\pbwfsp0t.bnquebec.ca\Secrétariats
+\\pbwfsp0t.bnquebec.ca\COMMUN
+\\pbwfsp0t.bnquebec.ca\DGD_Membres_du_personnel
+\\pbwfsp0t.bnquebec.ca\Lean Six sigma
+\\pbwfsp0t.bnquebec.ca\RFQ
+\\pbwfsp0t.bnquebec.ca\Comité DR - Veille informationnelle
+\\pbwfsp0t.bnquebec.ca\DPS
+\\pbwfsp0t.bnquebec.ca\Services aux usagers_DGD
+\\pbwfsp0t.bnquebec.ca\Bureau de la présidence et des affaires institutionnelles
+\\pbwfsp0t.bnquebec.ca\Petites annonces
+\\pbwfsp0t.bnquebec.ca\Présidence
+\\pbwfsp0t.bnquebec.ca\Web2.0
+\\pbwfsp0t.bnquebec.ca\ArchivesQue
+\\pbwfsp0t.bnquebec.ca\Documentation
+\\pbwfsp0t.bnquebec.ca\Finances
+\\pbwfsp0t.bnquebec.ca\comité numérisation libre service
+\\pbwfsp0t.bnquebec.ca\Comite_organisateur_Centraide
+\\pbwfsp0t.bnquebec.ca\DCAR
+\\pbwfsp0t.bnquebec.ca\Revue de BAnQ

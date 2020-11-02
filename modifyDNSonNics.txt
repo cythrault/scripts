@@ -1,0 +1,4 @@
+#dns 
+get-dnsclientserveraddress | set-dnsclientserveraddress -serveraddresses @("8.8.8.8","127.0.0.1")
+#forwarders
+set-dnsserverforwarder 

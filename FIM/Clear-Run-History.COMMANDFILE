@@ -1,0 +1,6 @@
+@ECHO OFF
+
+REM Clear the FIM 2010 Run Profile History, based on the given number of days (default is 60 days)
+REM i.e. ClearRunHistory.cmd 10 will clear all run history details older than 10 days
+
+POWERSHELL -nologo -command "&'%~dp0\Clear-Run-History.ps1'"

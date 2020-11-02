@@ -1,0 +1,1 @@
+powershell.exe -command "& {Invoke-Command -ConfigurationName Lana-Utils -ComputerName NZ-PDC-Win01 -Command { Get-Lockouts} | Select-Object -Property TimeCreated, UserName, ClientName | Out-GridView -Title 'Recently Locked Out Users' -PassThru | Out-Null}"

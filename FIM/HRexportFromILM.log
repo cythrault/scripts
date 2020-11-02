@@ -1,0 +1,115 @@
+Microsoft (R) SQL Server Execute Package Utility
+Version 10.50.6000.34 for 32-bit
+Copyright (C) Microsoft Corporation 2010. All rights reserved.
+
+Started:  10:04:53 AM
+Info: 2016-08-18 10:04:54.39
+   Code: 0x40016041
+   Source: PB_Email_update_temp 
+   Description: The package is attempting to configure from the XML file "C:\SSIS-Soln\HRexportFromILM\HRexportFromILM\Config\FIMSSISExportConfigConnection.dtsConfig".
+End Info
+Info: 2016-08-18 10:04:54.39
+   Code: 0x40016041
+   Source: PB_Email_update_temp 
+   Description: The package is attempting to configure from the XML file "C:\SSIS-Soln\HRexportFromILM\HRexportFromILM\Config\FIMSSISExportConfigConnection.dtsConfig".
+End Info
+Info: 2016-08-18 10:04:54.39
+   Code: 0x4004300A
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: Validation phase is beginning.
+End Info
+Warning: 2016-08-18 10:04:54.62
+   Code: 0x802092A7
+   Source: Migrate from SQL to Oracle Oracle [43]
+   Description: Truncation may occur due to inserting data from data flow column "Email_Address_65001" with a length of 240 to database column "EMAIL_ADDRESS" with a length of 100.
+End Warning
+Warning: 2016-08-18 10:04:54.85
+   Code: 0x00000000
+   Source: Purge Oracle PB_Email_update_temp 
+   Description: Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done.
+End Warning
+Warning: 2016-08-18 10:04:54.85
+   Code: 0x00000000
+   Source: Purge Oracle PB_Email_update_temp 
+   Description: Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done.
+End Warning
+Info: 2016-08-18 10:04:54.87
+   Code: 0x4004300A
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: Validation phase is beginning.
+End Info
+Warning: 2016-08-18 10:04:54.98
+   Code: 0x802092A7
+   Source: Migrate from SQL to Oracle Oracle [43]
+   Description: Truncation may occur due to inserting data from data flow column "Email_Address_65001" with a length of 240 to database column "EMAIL_ADDRESS" with a length of 100.
+End Warning
+Info: 2016-08-18 10:04:54.98
+   Code: 0x40043006
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: Prepare for Execute phase is beginning.
+End Info
+Info: 2016-08-18 10:04:55.10
+   Code: 0x40043007
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: Pre-Execute phase is beginning.
+End Info
+Info: 2016-08-18 10:04:55.15
+   Code: 0x4004300C
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: Execute phase is beginning.
+End Info
+DataFlow: 2016-08-18 10:04:55.15
+   Source: Migrate from SQL to Oracle 
+   Component "to UNI" (381) will receive 11 rows on input "Data Conversion Input" (382)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.15
+   Source: Migrate from SQL to Oracle 
+   Component "to 65001" (387) will receive 11 rows on input "Data Conversion Input" (388)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.15
+   Source: Migrate from SQL to Oracle 
+   Component "to UNI" (381) was given end of rowset on input "Data Conversion Input" (382)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.15
+   Source: Migrate from SQL to Oracle 
+   Component "Oracle" (43) will receive 11 rows on input "OLE DB Destination Input" (56)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.15
+   Source: Migrate from SQL to Oracle 
+   Component "to UNI" (381) will receive 0 rows on input "Data Conversion Input" (382)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.15
+   Source: Migrate from SQL to Oracle 
+   Component "to 65001" (387) was given end of rowset on input "Data Conversion Input" (388)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.15
+   Source: Migrate from SQL to Oracle 
+   Component "to 65001" (387) will receive 0 rows on input "Data Conversion Input" (388)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.31
+   Source: Migrate from SQL to Oracle 
+   Component "Oracle" (43) was given end of rowset on input "OLE DB Destination Input" (56)
+End DataFlow
+DataFlow: 2016-08-18 10:04:55.31
+   Source: Migrate from SQL to Oracle 
+   Component "Oracle" (43) will receive 0 rows on input "OLE DB Destination Input" (56)
+End DataFlow
+Info: 2016-08-18 10:04:55.62
+   Code: 0x40043008
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: Post Execute phase is beginning.
+End Info
+Info: 2016-08-18 10:04:55.62
+   Code: 0x4004300B
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: "component "Oracle" (43)" wrote 11 rows.
+End Info
+Info: 2016-08-18 10:04:55.62
+   Code: 0x40043009
+   Source: Migrate from SQL to Oracle SSIS.Pipeline
+   Description: Cleanup phase is beginning.
+End Info
+DTExec: The package execution returned DTSER_SUCCESS (0).
+Started:  10:04:53 AM
+Finished: 10:04:55 AM
+Elapsed:  1.841 seconds

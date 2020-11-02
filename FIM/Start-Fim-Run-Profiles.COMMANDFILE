@@ -1,0 +1,6 @@
+@ECHO OFF
+
+REM Start the FIM 2010 Run Profiles, based on the given run sequence (default is DELTA)
+REM i.e. Start-Fim-Run-Profiles.cmd FULL will start the FULL run profile sequence
+
+powershell -nologo "&'%~dp0\Start-Fim-Run-Profiles.ps1'" %1

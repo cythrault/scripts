@@ -1,0 +1,191 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190129091703
+Username: BNQUEBEC\mthomas
+RunAs User: BNQUEBEC\mthomas
+Configuration Name: 
+Machine: BNQ132885 (Microsoft Windows NT 10.0.17134.0)
+Host Application: C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 28320
+PSVersion: 5.1.17134.407
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.407
+BuildVersion: 10.0.17134.407
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is New-BAnQ.log
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+>> TerminatingError(Split-Path): "Cannot bind argument to parameter 'Path' because it is null."
+Split-Path : Cannot bind argument to parameter 'Path' because it is null.
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:162 char:37
++ ... art-Transcript -Path $(split-path $MyInvocation.PSCommandPath -Leaf). ...
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCommand
+Split-Path : Cannot bind argument to parameter 'Path' because it is null.
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:162 char:37
++ ... art-Transcript -Path $(split-path $MyInvocation.PSCommandPath -Leaf). ...
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCommand
+
+>> TerminatingError(Start-Transcript): "Cannot validate argument on parameter 'Path'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+Start-Transcript : Cannot validate argument on parameter 'Path'. The argument is null or empty. Provide an argument 
+that is not null or empty, and then try the command again.
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:162 char:24
++ ... -Transcript -Path $(split-path $MyInvocation.PSCommandPath -Leaf).log
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Start-Transcript], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.StartTranscriptCommand
+Start-Transcript : Cannot validate argument on parameter 'Path'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:162 char:24
++ ... -Transcript -Path $(split-path $MyInvocation.PSCommandPath -Leaf).log
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Start-Transcript], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.StartTranscriptCommand
+
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:164 char:29
++ $MyInvocation.PSCommandPath -Leaf
++                             ~~~~~
+Unexpected token '-Leaf' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:164 char:29
++ $MyInvocation.PSCommandPath -Leaf
++                             ~~~~~
+Unexpected token '-Leaf' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+
+PSVersion: 5.1.17134.407
+
+$PSCommandPath:
+ *   Direct: C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1
+ * Function: C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1
+
+$MyInvocation.ScriptName:
+ *   Direct:
+ * Function: C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1
+
+$MyInvocation.MyCommand.Name:
+ *   Direct: New-BAnQ.ps1
+ * Function: MyCommandName
+
+$MyInvocation.MyCommand.Definition:
+ *   Direct: C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1
+ * Function:  return $MyInvocation.MyCommand.Definition; # Note this is the contents of the MyCommandDefinition function
+
+$MyInvocation.PSCommandPath:
+ *   Direct:
+ * Function: C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1
+
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(TabExpansion2): "Cannot bind argument to parameter 'inputScript' because it is an empty string."
+PS C:\Users\martin.thomas\OneDrive\scripts> "$($MyInvocation.ScriptName)"
+
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+New-BAnQ.ps1
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> (Get-Item .\472x.ps1).basename
+472x
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Start-Transcript): "Cannot validate argument on parameter 'Path'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+Start-Transcript : Cannot validate argument on parameter 'Path'. The argument is null or empty. Provide an argument 
+that is not null or empty, and then try the command again.
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:162 char:24
++ ... script -Path ((Get-Item ($MyInvocation.MyCommand.Name)).Basename).log
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Start-Transcript], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.StartTranscriptCommand
+Start-Transcript : Cannot validate argument on parameter 'Path'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+At C:\Users\martin.thomas\OneDrive\scripts\New-BAnQ.ps1:162 char:24
++ ... script -Path ((Get-Item ($MyInvocation.MyCommand.Name)).Basename).log
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Start-Transcript], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.StartTranscriptCommand
+
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+New-BAnQ.ps1
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> Get-Item $MyInvocation.MyCommand.Name
+>> TerminatingError(Get-Item): "Cannot bind argument to parameter 'Path' because it is an empty string."
+Get-Item : Cannot bind argument to parameter 'Path' because it is an empty string.
+At line:1 char:10
++ Get-Item $MyInvocation.MyCommand.Name
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Get-Item], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorEmptyStringNotAllowed,Microsoft.PowerShell.Commands.GetItemCommand
+Get-Item : Cannot bind argument to parameter 'Path' because it is an empty string.
+At line:1 char:10
++ Get-Item $MyInvocation.MyCommand.Name
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Get-Item], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorEmptyStringNotAllowed,Microsoft.PowerShell.Commands.GetItemCommand
+
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+New-BAnQ.ps1
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+
+
+    Directory: C:\Users\martin.thomas\OneDrive\scripts
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a---l        1/29/2019   9:24 AM           7608 New-BAnQ.ps1
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+New-BAnQ
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+((Get-Item System.Management.Automation.InvocationInfo.MyCommand.Name).Basename).log
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+((Get-Item System.Management.Automation.InvocationInfo.MyCommand.Name).Basename).log
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+New-BAnQ.log
+PS C:\Users\martin.thomas\OneDrive\scripts> TerminatingError(Invoke-Expression): "Cannot bind argument to parameter 'Command' because it is null."
+Impossible d'obtenir l'information de(s) compte(s).
+PS C:\Users\martin.thomas\OneDrive\scripts> .\New-BAnQ.ps1
+**********************
+Windows PowerShell transcript end
+End time: 20190129092514
+**********************

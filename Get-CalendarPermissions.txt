@@ -1,0 +1,18 @@
+$salles = get-mailbox -Resultsize Unlimited -Filter {displayname -like "salle de réunion*"}
+$salles | %{
+    try { Get-MailboxFolderPermission -Identity "$($_.Alias):\Calendar" -ErrorAction SilentlyContinue }
+	catch { Get-MailboxFolderPermission -Identity "$($_.Alias):\Calendrier" -ErrorAction SilentlyContinue }
+    $permissions = get-mailboxfolderpermission $ID
+    foreach ( $perm in $permissions ) {
+		$mailbox = $address
+		$granteduser = $perm.User
+        $access = $perm.AccessRights
+        $identity = $perm.Identity
+        $valid = $perm.IsValid
+        if ( $identity -ne "Anonymous" ) {
+            $outstring = "$mailbox,$granteduser,$identity,$access,$valid`n"
+            $output += $outstring
+            write-host $outstring
+		}
+    }
+}

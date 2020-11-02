@@ -1,0 +1,24 @@
+#--------------------------------------------------------------------------------------------------------------------
+# FIM 2010 Clear Run History script
+#--------------------------------------------------------------------------------------------------------------------
+
+# Setup the argument parameters and declare defaults
+# Default is two weeks of history to retain
+param([string]$NumDaysToKeepRunHistory = 60)
+
+# Calculate the date to clear runs against
+[string]$ClearRunsDate = [DateTime]::Now.AddDays(-$NumDaysToKeepRunHistory).ToUniversalTime()
+
+# Get the WMI Object for MIIS_Server
+$miiserver = @(Get-WmiObject -Class "MIIS_Server" -Namespace "root\MicrosoftIdentityIntegrationServer" -Computer ".")
+
+# Clear the Run History
+Write-Host "Clearing the Run History prior to (UTC)" $ClearRunsDate
+Write-Host "Result: " $miiserver[0].ClearRuns($ClearRunsDate).ReturnValue
+
+#--------------------------------------------------------------------------------------------------------------------
+trap 
+{ 
+	Write-Host "`nError: $($_.Exception.Message)`n" -Foregroundcolor white -Backgroundcolor darkred
+}
+#--------------------------------------------------------------------------------------------------------------------

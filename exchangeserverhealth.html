@@ -1,0 +1,94 @@
+﻿<html>
+                <style>
+                BODY{font-family: Arial; font-size: 8pt;}
+                H1{font-size: 16px;}
+                H2{font-size: 14px;}
+                H3{font-size: 12px;}
+                TABLE{border: 1px solid black; border-collapse: collapse; font-size: 8pt;}
+                TH{border: 1px solid black; background: #dddddd; padding: 5px; color: #000000;}
+                TD{border: 1px solid black; padding: 5px; }
+                td.pass{background: #7FFF00;}
+                td.warn{background: #FFE600;}
+                td.fail{background: #FF0000; color: #ffffff;}
+                td.info{background: #85D4FF;}
+                </style>
+                <body>
+                <h1 align="center">Exchange Server Health Check Report</h1>
+                <h3 align="center">Generated: 10/29/2018 15:51:41</h3><h3>Exchange Server Health Check Summary</h3>
+                        <p>No Exchange server health errors or warnings.</p><h3>Database Availability Group Health Check Summary</h3>
+                        <p>The following DAG errors and warnings were detected.</p>
+                        <p>
+                        <ul><li>cleanup2 - mounted on server that is activation preference 2</li></ul></p><h3>Exchange Server Health</h3>
+                        <p>
+                        <table>
+                        <tr>
+                        <th>Server</th>
+                        <th>Site</th>
+                        <th>Roles</th>
+                        <th>Version</th>
+                        <th>DNS</th>
+                        <th>Ping</th>
+                        <th>Uptime (hrs)</th>
+                        <th>Client Access Server Role Services</th>
+                        <th>Hub Transport Server Role Services</th>
+                        <th>Mailbox Server Role Services</th>
+                        <th>Unified Messaging Server Role Services</th>
+                        <th>Transport Queue</th>
+                        <th>PF DBs Mounted</th>
+                        <th>MB DBs Mounted</th>
+                        <th>MAPI Test</th>
+                        <th>Mail Flow Test</th>
+                        </tr><tr><td>PVWEXC0A</td><td>Berri</td><td>Mailbox</td><td>Exchange 2010</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">183</td><td>n/a</td><td>n/a</td><td class="pass">Pass</td><td>n/a</td><td>n/a</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Success</td><td class="pass">Pass</td></tr><tr><td>PVWEXC0B</td><td>Berri</td><td>ClientAccess, HubTransport</td><td>Exchange 2010</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">151</td><td class="pass">Pass</td><td class="pass">Pass</td><td>n/a</td><td>n/a</td><td class="pass">Pass (0)</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr><tr><td>PVWEXC0C</td><td>Berri</td><td>Mailbox</td><td>Exchange 2010</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">151</td><td>n/a</td><td>n/a</td><td class="pass">Pass</td><td>n/a</td><td>n/a</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Success</td><td>No active DBs</td></tr><tr><td>PVWEXC0D</td><td>Berri</td><td>ClientAccess, HubTransport</td><td>Exchange 2010</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">151</td><td class="pass">Pass</td><td class="pass">Pass</td><td>n/a</td><td>n/a</td><td class="pass">Pass (0)</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr></table></p><p>Database Availability Group <strong>DAG</strong> Health Summary:</p><p>
+                            <table>
+                            <tr>
+                            <th>Database</th>
+                            <th>Mounted on</th>
+                            <th>Preference</th>
+                            <th>Total Copies</th>
+                            <th>Healthy Copies</th>
+                            <th>Unhealthy Copies</th>
+                            <th>Healthy Queues</th>
+                            <th>Unhealthy Queues</th>
+                            <th>Lagged Queues</th>
+                            <th>Healthy Indexes</th>
+                            <th>Unhealthy Indexes</th>
+                            </tr><tr><td><strong>Archives-A-M</strong></td><td>PVWEXC0A</td><td class="pass">1</td><td>2</td><td class="pass">2</td><td class="pass">0</td><td class="pass">2</td><td class="pass">0</td><td>0</td><td class="pass">2</td><td class="pass">0</td></tr><tr><td><strong>Archives-N-Z</strong></td><td>PVWEXC0A</td><td class="pass">1</td><td>2</td><td class="pass">2</td><td class="pass">0</td><td class="pass">2</td><td class="pass">0</td><td>0</td><td class="pass">2</td><td class="pass">0</td></tr><tr><td><strong>cleanup2</strong></td><td>PVWEXC0A</td><td class="warn">2</td><td>2</td><td class="pass">2</td><td class="pass">0</td><td class="pass">2</td><td class="pass">0</td><td>0</td><td class="pass">2</td><td class="pass">0</td></tr><tr><td><strong>Store-A-H</strong></td><td>PVWEXC0A</td><td class="pass">1</td><td>2</td><td class="pass">2</td><td class="pass">0</td><td class="pass">2</td><td class="pass">0</td><td>0</td><td class="pass">2</td><td class="pass">0</td></tr><tr><td><strong>Store-I-Q</strong></td><td>PVWEXC0A</td><td class="pass">1</td><td>2</td><td class="pass">2</td><td class="pass">0</td><td class="pass">2</td><td class="pass">0</td><td>0</td><td class="pass">2</td><td class="pass">0</td></tr><tr><td><strong>Store-R-Z</strong></td><td>PVWEXC0A</td><td class="pass">1</td><td>2</td><td class="pass">2</td><td class="pass">0</td><td class="pass">2</td><td class="pass">0</td><td>0</td><td class="pass">2</td><td class="pass">0</td></tr></table>
+                                    </p><p>Database Availability Group <strong>DAG</strong> Health Details:</p><p>
+                                <table>
+                                <tr>
+                                <th>Database Copy</th>
+                                <th>Database Name</th>
+                                <th>Mailbox Server</th>
+                                <th>Activation Preference</th>
+                                <th>Status</th>
+                                <th>Copy Queue</th>
+                                <th>Replay Queue</th>
+                                <th>Replay Lagged</th>
+                                <th>Truncation Lagged</th>
+                                <th>Content Index</th>
+                                </tr><tr><td><strong>Archives-A-M\PVWEXC0A</strong></td><td>Archives-A-M</td><td>PVWEXC0A</td><td>1</td><td class="pass">Mounted</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Archives-A-M\PVWEXC0C</strong></td><td>Archives-A-M</td><td>PVWEXC0C</td><td>2</td><td class="pass">Healthy</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Archives-N-Z\PVWEXC0A</strong></td><td>Archives-N-Z</td><td>PVWEXC0A</td><td>1</td><td class="pass">Mounted</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Archives-N-Z\PVWEXC0C</strong></td><td>Archives-N-Z</td><td>PVWEXC0C</td><td>2</td><td class="pass">Healthy</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>cleanup2\PVWEXC0A</strong></td><td>cleanup2</td><td>PVWEXC0A</td><td>2</td><td class="pass">Mounted</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>cleanup2\PVWEXC0C</strong></td><td>cleanup2</td><td>PVWEXC0C</td><td>1</td><td class="pass">Healthy</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Store-A-H\PVWEXC0A</strong></td><td>Store-A-H</td><td>PVWEXC0A</td><td>1</td><td class="pass">Mounted</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Store-A-H\PVWEXC0C</strong></td><td>Store-A-H</td><td>PVWEXC0C</td><td>2</td><td class="pass">Healthy</td><td class="pass">0</td><td class="pass">1</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Store-I-Q\PVWEXC0A</strong></td><td>Store-I-Q</td><td>PVWEXC0A</td><td>1</td><td class="pass">Mounted</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Store-I-Q\PVWEXC0C</strong></td><td>Store-I-Q</td><td>PVWEXC0C</td><td>2</td><td class="pass">Healthy</td><td class="pass">0</td><td class="pass">1</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Store-R-Z\PVWEXC0A</strong></td><td>Store-R-Z</td><td>PVWEXC0A</td><td>1</td><td class="pass">Mounted</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr><tr><td><strong>Store-R-Z\PVWEXC0C</strong></td><td>Store-R-Z</td><td>PVWEXC0C</td><td>2</td><td class="pass">Healthy</td><td class="pass">0</td><td class="pass">0</td><td>False</td><td>False</td><td class="pass">Healthy</td></tr></table>
+                                    </p><p>Database Availability Group <strong>DAG</strong> Member Health:</p><p>
+                                <table>
+                                <tr>
+                                <th>Server</th>
+                                <th>Cluster Service</th>
+                                <th>Replay Service</th>
+                                <th>Active Manager</th>
+                                <th>Tasks RPC Listener</th>
+                                <th>TCP Listener</th>
+                                <th>Server Locator Service</th>
+                                <th>DAG Members Up</th>
+                                <th>Cluster Network</th>
+                                <th>Quorum Group</th>
+                                <th>File Share Quorum</th>
+                                <th>Database Redundancy</th>
+                                <th>Database Availability</th>
+                                <th>DB Copy Suspended</th>
+                                <th>DB Copy Failed</th>
+                                <th>DB Initializing</th>
+                                <th>DB Disconnected</th>
+                                <th>DB Log Copy Keeping Up</th>
+                                <th>DB Log Replay Keeping Up</th>
+                                </tr><tr><td><strong>PVWEXC0A</strong></td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr><tr><td><strong>PVWEXC0C</strong></td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td>n/a</td><td>n/a</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td><td class="pass">Passed</td></tr></table>
+            </p></body>
+                </html>

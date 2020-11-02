@@ -1,0 +1,1 @@
+﻿Add-Computer -DomainName corp.pbwan.net -Credential corp\camt055545it9 -OUPath "OU=Basic,OU=VDI,OU=Users,OU=Canada,DC=corp,DC=pbwan,DC=net" -Restart -Force -Verbose
